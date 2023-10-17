@@ -77,11 +77,10 @@ public class AmazonStepdefinitions {
         amazonPage.ilkUrunElementi.click();
     }
     @Then("urun isminin {string} icerdigini test eder")
-    public void urun_isminin_icerdigini_test_eder(String ilkUrunIsimElementi) {
+    public void urun_isminin_icerdigini_test_eder(String arananUrun) {
 
+        String actualIlkUrunIsmi = amazonPage.ilkUrunIsimElementi.getText();
+
+        Assert.assertTrue(actualIlkUrunIsmi.contains(arananUrun));
     }
-
-
-
-
 }

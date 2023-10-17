@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class ZeroAppPage {
+
     public ZeroAppPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -33,5 +34,4 @@ public class ZeroAppPage {
 
     @FindBy(id = "pc_currency")
     public WebElement pcCurrencyDropdown;
-
 }

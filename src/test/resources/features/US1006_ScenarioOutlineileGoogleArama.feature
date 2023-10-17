@@ -1,19 +1,21 @@
 Feature: US1006 verilen listedeki urunleri google'da arama
-  # veriilen lsitedeki her urunu google'da aratıp
-  # arama sonuclarının aranan urun ismini içerdiğini test edin
 
-  @wip
+  # verilen listedeki her urunu google'da aratip
+  # arama sonuclarinin aranan urun ismini icerdigini test edin
+
   Scenario Outline: TC10 google'da listedeki urunler aratilabilmeli
 
     Given kullanici "googleUrl" anasayfaya gider
-    Then google'da "<istenenKelieme>" icin arama yapar
-    And google arama sonuclarinin "istenenKelime" icerdigini test eder
+    And cookies kabul eder
+    And 2 saniye bekler
+    Then google da "<istenenKelime>" icin arama yapar
+    And google arama sonuclarinin "<istenenKelime>" icerdigini test eder
     And sayfayi kapatir
 
     Examples:
-      | istenenKelieme |
-      |Nutella         |
-      |Java            |
-      |Apple           |
-      |Samsung         |
-      |Wisequaeter     |
+      | istenenKelime |
+      |Nutella        |
+      |Java           |
+      |Apple          |
+      |Samsung        |
+      |Wisequarter    |

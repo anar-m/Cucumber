@@ -1,43 +1,41 @@
 package runners;
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target\\cucumber-report.html",
-                    "json:target/json-report/cucumber.json",
-                    "junit:target/xml-report/cucumber.xml"},
-        features = "src\\test\\resources\\features",
+        plugin = {"html:target/cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"},
+        features = "src/test/resources/features",
         glue = "stepdefinitions",
         tags = "@wip",
         dryRun = false
 )
-
-
-
 public class Runner {
 
     /*
-        Runner class'ı boş bir class'dır
+        Runner class'i bos bir class'dir
 
-        bu class'ta asıl işi
+        bu class'da asil isi
 
-        Class'ta kullandığımız iki notasyon yapar
+        Class'da kullandigimiz 2 notasyon yapar
 
-        druRun = true secildiginde
-        Runner istenen featur/scenario'yu çalıştırmaya değil
-        eksik adımları bulmaya odaklanır
+        dryRun = true secildiginde
+        Runner istenen featur/scenario'yu calistirmaya degil
+        eksik adimlarini bulmaya odaklanir
 
-        eğer eksik adım yoksa
+        eger eksik adim yoksa
         test PASSED der.
-        Ama bu testin çalışıp tüm adımların geçtiğini göstermez.
-        SADECE eksik adım olmadığını gösterir
+        ama bu testin calisip, tum adimlarin gectigini gostermez
+        SADECE eksik adim olmadigini gosterir
 
-        EĞER eksik adım bulam amacımız yoksa
-        testlerimizi normal olarak ÇALIŞTIRMAK istiyorsak
+        EGER eksik adim bulma amacimiz yoksa
+        testlerimizi normal olarak CALISTIRMAK istiyorsak
         dryRun = false secilmelidir
-
      */
+
 }
