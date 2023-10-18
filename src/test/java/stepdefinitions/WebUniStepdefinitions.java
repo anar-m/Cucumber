@@ -46,7 +46,7 @@ public class WebUniStepdefinitions {
     }
     @Then("Popup'ta cikan yazinin validation failed oldugunu test eder")
     public void popup_ta_cikan_yazinin_validation_failed_oldugunu_test_eder() {
-        ReusableMethods.bekle(7);
+        ReusableMethods.bekle(1);
         String expectedAlertYazisi = "validation failed";
         String actualAlertYazisi = Driver.getDriver().switchTo().alert().getText();
         System.out.println("============"+actualAlertYazisi);
